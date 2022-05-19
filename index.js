@@ -12,7 +12,8 @@ io.on("connection", (socket) => {
     })
 
     socket.on("msg", (data) => {
-        console.log(`User_name: ${data.username} - Mensagem: ${data.msg}`)
+        socket.emit("showmsg", data)
+        
     })
 
 

@@ -33,5 +33,13 @@
         socket.emit("msg", {msg: msg, username: username})
     }
 
+    socket.on("showmsg", (data) => {
+        let chat = document.getElementById("chat")
+        let p = document.createElement("p")
+        p.innerHTML = `name(${data.username}) : ${data.msg}`
+        chat.append(p)
+        
+    })
+
 </script>
 </html>
