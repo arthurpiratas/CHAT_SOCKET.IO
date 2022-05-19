@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Chat</h1>
+    <div id="chat">
+
+    </div> <br> <br>
+    <input type="text" name="" id="msg"> <br>
+    <input type="text" name="" id="username" placeholder="Digite seu nome"> <br> <br>
+    <button>Enviar</button>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+<script>
+    var socket = io("http://localhost:3000")
+
+    socket.on("disconnect", () => {
+        console.log("Desconectado!")
+    })
+
+   
+
+</script>
+</html>
